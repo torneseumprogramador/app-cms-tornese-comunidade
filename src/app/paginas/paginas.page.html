@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      CMS do T.O.P.
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">
+        CMS do T.O.P.
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <app-menu></app-menu>
+
+    <h1>Páginas</h1>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Restrita?</th>
+          <th>Login?</th>
+          <th>Home?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pagina of paginas">
+          <td>{{pagina.nome}}</td>
+          <td>{{pagina.areaRestrita ? "Sim" : "Não"}}</td>
+          <td>{{pagina.login ? "Sim" : "Não"}}</td>
+          <td>{{pagina.home ? "Sim" : "Não"}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ion-content>

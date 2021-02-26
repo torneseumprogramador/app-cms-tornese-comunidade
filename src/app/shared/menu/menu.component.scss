@@ -1,0 +1,21 @@
+.my-custom-menu {
+  --width: 500px;
+}
+
+.menu-botao{
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+}
+
+.btn{
+  padding: 10px;
+  border-radius: 6px;
+  position: absolute;
+  top:0px;
+  right: 0px;
+}
+
+ion-menu{
+  height: 100vh;
+}
