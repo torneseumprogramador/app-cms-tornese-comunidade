@@ -1,5 +1,7 @@
 {
   "name": "app-cms",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
