@@ -2,11 +2,6 @@
   text-align: left;
   padding: 25px;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 #container h1{
@@ -32,7 +27,7 @@
 }
 
 table{
-  background-color: rgb(53, 53, 53);
+  background-color: rgb(205, 205, 205);
 }
 table tr{
   padding: 10px;
@@ -40,6 +35,7 @@ table tr{
 table th{
   padding: 10px;
   background-color: rgb(29, 29, 29);
+  color: #fff;
 }
 table td{
   padding: 10px;

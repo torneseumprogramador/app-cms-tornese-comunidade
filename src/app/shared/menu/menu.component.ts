@@ -25,10 +25,4 @@ export class MenuComponent implements OnInit {
   paginas(){
     this.router.navigateByUrl("/paginas")
   }
-
-  openCustom() {
-    this.menu.enable(true, 'custom');
-    this.menu.open('custom');
-  }
-
 }

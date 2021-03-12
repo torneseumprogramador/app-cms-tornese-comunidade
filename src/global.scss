@@ -24,3 +24,18 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-title, ion-item{
+  color: #fff;
+}
+
+.ion-color-tertiary{
+  --ion-color-base: var(--ion-color-tertiary, #000) !important
+}
+
+.menuButton{
+  position: absolute;
+  top: -4px;
+  right: 9px;
+  padding: 10px;
+}

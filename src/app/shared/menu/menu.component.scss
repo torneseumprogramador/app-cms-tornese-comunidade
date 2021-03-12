@@ -1,21 +1,24 @@
-.my-custom-menu {
-  --width: 500px;
+
+.menu-itens{
+  display:none;
+  z-index: 999999;
+  list-style: none;
+  padding: 0px;
 }
 
-.menu-botao{
-  display: inline-block;
-  text-align: right;
-  width: 100%;
+.menu-itens li{
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 2px
 }
 
-.btn{
+button{
   padding: 10px;
-  border-radius: 6px;
   position: absolute;
-  top:0px;
-  right: 0px;
+  top: 9px;
+  right: 9px;
 }
 
-ion-menu{
-  height: 100vh;
+.openMenu{
+  display: block;
 }
