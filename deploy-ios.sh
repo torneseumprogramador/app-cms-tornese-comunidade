@@ -4,7 +4,7 @@ git commit -am "deploy"
 git push
 
 
-echo "Configurando ambiente ceudaboca"
+echo "Configurando ambiente app cms"
 
 
 # ionic cordova plugin add cordova-plugin-ionic-webview --save

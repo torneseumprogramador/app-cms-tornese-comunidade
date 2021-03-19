@@ -70,6 +70,8 @@
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-camera": {}
     },
-    "platforms": []
+    "platforms": [
+      "ios"
+    ]
   }
 }
