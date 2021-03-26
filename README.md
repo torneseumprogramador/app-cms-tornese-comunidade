@@ -4,7 +4,7 @@ ionic cordova resources
 # - passo 0 - quando não tem a chave
 Gerar assinatura
 -----------------------------------------------------------------------------------------
-keytool -genkey -v -keystore debug.keystore -storepass cmsappapp -alias androiddebugkey -keypass cmsapp -keyalg RSA -keysize 2048 -validity 10000
+keytool -genkey -v -keystore debug.keystore -storepass cmsapp -alias androiddebugkey -keypass cmsapp -keyalg RSA -keysize 2048 -validity 10000
 
 -----------------------------------------------------------------------------------------
 # - passo 1
