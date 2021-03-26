@@ -25,4 +25,8 @@ export class MenuComponent implements OnInit {
   paginas(){
     this.router.navigateByUrl("/paginas")
   }
+
+  administradores(){
+    this.router.navigateByUrl("/administradores")
+  }
 }

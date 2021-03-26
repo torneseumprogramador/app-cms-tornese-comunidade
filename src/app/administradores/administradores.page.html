@@ -1,0 +1,13 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true">
+  <app-menu></app-menu>
+  <div class="container">
+    <h1>Administradores</h1>
+    <div class="linha" *ngFor="let administrador of administradores">
+      <div><label>Nome:</label> {{administrador.nome}}</div>
+      <div><label>Telefone:</label> {{administrador.telefone}}</div>
+      <div><label>Email:</label> {{administrador.email}}</div>
+    </div>
+  </div>
+</ion-content>
