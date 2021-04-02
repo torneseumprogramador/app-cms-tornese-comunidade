@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from '../shared/header/header.component';
 
 import { AdministradoresPage } from './administradores.page';
+import { AdmFormComponent } from './adm-form/adm-form.component';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { AdministradoresPage } from './administradores.page';
     AdministradoresPageRoutingModule
   ],
   declarations: [
+    AdmFormComponent,
     MenuComponent,
     HeaderComponent,
     AdministradoresPage

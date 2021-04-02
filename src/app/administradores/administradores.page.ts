@@ -10,7 +10,21 @@ import { AdministradorService } from '../services/administradorService';
 })
 export class AdministradoresPage implements OnInit {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) { 
+    AdministradoresPage.setInstance(this);
+  }
+
+  private static _instance:AdministradoresPage
+
+  static setInstance(admPage:AdministradoresPage){
+    AdministradoresPage._instance = admPage;
+  }
+
+  static getInstance():AdministradoresPage{
+    return AdministradoresPage._instance;
+  }
+
+  form:boolean = false
 
   ngOnInit() {
     this.carregaAdministradores()
@@ -18,7 +32,12 @@ export class AdministradoresPage implements OnInit {
 
   public administradores:Administrador[]
 
+  abrirForm(){
+    if(!this.form) this.form = true
+    else this.form = false
+  }
+
   async carregaAdministradores(){
-    this.administradores = await new AdministradorService(this.http).todos();
+    this.administradores = await new AdministradorService(this.http).todos()
   }
 }

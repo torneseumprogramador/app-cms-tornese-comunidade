@@ -4,6 +4,11 @@
   <app-menu></app-menu>
   <div class="container">
     <h1>Administradores</h1>
+    <button (click)="abrirForm()" class="btn btn-primary">Novo</button>
+    <hr>
+    <div *ngIf="form">
+      <app-adm-form></app-adm-form>
+    </div>
     <div class="linha" *ngFor="let administrador of administradores">
       <div><label>Nome:</label> {{administrador.nome}}</div>
       <div><label>Telefone:</label> {{administrador.telefone}}</div>

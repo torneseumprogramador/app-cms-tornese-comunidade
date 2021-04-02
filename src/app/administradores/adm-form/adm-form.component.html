@@ -1,0 +1,17 @@
+<form>
+  <label for="nome">Nome:</label><br>
+  <input type="text" [(ngModel)]="administrador.nome" id="nome" name="nome"><br>
+
+  <label for="telefone">Telefone:</label><br>
+  <input type="text" [(ngModel)]="administrador.telefone" id="telefone" name="telefone"><br><br>
+
+  <label for="email">Email:</label><br>
+  <input type="text" [(ngModel)]="administrador.email" id="email" name="email"><br><br>
+
+  <label for="senha">Senha:</label><br>
+  <input type="password" [(ngModel)]="administrador.senha" id="senha" name="senha"><br><br>
+
+  <input type="submit" [disabled]="!administrador.nome || !administrador.email || !administrador.senha" (click)="salvar()" value="Salvar">
+  <button class="cancelar" (click)="cancelar()">Cancelar</button>
+</form>
+<br>
