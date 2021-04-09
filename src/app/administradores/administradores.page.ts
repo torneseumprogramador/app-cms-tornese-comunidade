@@ -25,9 +25,20 @@ export class AdministradoresPage implements OnInit {
   }
 
   form:boolean = false
+  maisItensPaginado:boolean = false
+  page:number = 1
 
   ngOnInit() {
     this.carregaAdministradores()
+  }
+
+  async maisItens(){
+    this.page += 1;
+    let adms = await new AdministradorService(this.http).todos(this.page)
+    this.administradores = this.administradores.concat(adms)
+    if(adms.length < 2){
+      this.maisItensPaginado = false
+    }
   }
 
   public administradores:Administrador[]
@@ -38,6 +49,10 @@ export class AdministradoresPage implements OnInit {
   }
 
   async carregaAdministradores(){
+    this.page = 1
     this.administradores = await new AdministradorService(this.http).todos()
+    if(this.administradores.length == 2){
+      this.maisItensPaginado = true
+    }
   }
 }

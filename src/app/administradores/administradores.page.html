@@ -14,5 +14,6 @@
       <div><label>Telefone:</label> {{administrador.telefone}}</div>
       <div><label>Email:</label> {{administrador.email}}</div>
     </div>
+    <button (click)="maisItens()" *ngIf="maisItensPaginado">Carregar mais</button>
   </div>
 </ion-content>

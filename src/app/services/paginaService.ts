@@ -4,7 +4,7 @@ import { Pagina } from '../models/pagina'
 
 export class PaginaService{
   constructor(private http: HttpClient){ }
-  public async todos(){
-    return await this.http.get<Pagina[]>(`${environment.uri}/paginas.json`).toPromise()
+  public async todos(page:number = 1){
+    return await this.http.get<Pagina[]>(`${environment.uri}/paginas.json?page=${page}`).toPromise()
   }
 }

@@ -5,8 +5,8 @@ import { Administrador } from '../models/administrador'
 export class AdministradorService{
   constructor(private http: HttpClient){ }
 
-  public async todos(){
-    return await this.http.get<Administrador[]>(`${environment.uri}/administradores.json`).toPromise()
+  public async todos(page:number = 1){
+    return await this.http.get<Administrador[]>(`${environment.uri}/administradores.json?page=${page}`).toPromise()
   }
 
   public async salvar(administrador:Administrador){
