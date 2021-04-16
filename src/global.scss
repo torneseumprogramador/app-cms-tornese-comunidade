@@ -33,9 +33,37 @@ ion-title, ion-item{
   --ion-color-base: var(--ion-color-tertiary, #000) !important
 }
 
+input[type="text"], input[type="password"], input[type="number"], textarea{
+  color: #fff;
+}
+
+input[type="submit"]{
+  color: #fff;
+}
+
+.cancelar{
+  padding: 6px;
+  margin-left: 10px;
+  border-radius: 4px;
+  background-color: #841515;
+}
+
 .menuButton{
   position: absolute;
   top: -4px;
   right: 9px;
   padding: 10px;
+}
+
+.scroolTable{
+  overflow: auto;
+  width: 100%;
+}
+
+.btn-alterar{
+  margin-right: 5px;
+}
+
+.btn-danger{
+  background-color: red;
 }

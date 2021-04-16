@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Administrador } from '../models/administrador';
 import { AdministradorService } from '../services/administradorService';
+import { AdmFormComponent } from './adm-form/adm-form.component';
 
 @Component({
   selector: 'app-administradores',
@@ -54,5 +55,17 @@ export class AdministradoresPage implements OnInit {
     if(this.administradores.length == 2){
       this.maisItensPaginado = true
     }
+  }
+
+  async excluir(administrador:Administrador){
+    if(confirm("Confirma a exclusão?")){
+      await new AdministradorService(this.http).excluir(administrador)
+      this.carregaAdministradores();
+    }
+  }
+
+  alterar(administrador:Administrador){
+    AdmFormComponent.adm = administrador
+    this.abrirForm()
   }
 }

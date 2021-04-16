@@ -9,11 +9,14 @@
     <div *ngIf="form">
       <app-adm-form></app-adm-form>
     </div>
-    <div class="linha" *ngFor="let administrador of administradores">
-      <div><label>Nome:</label> {{administrador.nome}}</div>
-      <div><label>Telefone:</label> {{administrador.telefone}}</div>
-      <div><label>Email:</label> {{administrador.email}}</div>
+    <div *ngIf="!form">
+      <div class="linha" *ngFor="let administrador of administradores">
+        <div><label>Nome:</label> {{administrador.nome}}</div>
+        <div><label>Telefone:</label> {{administrador.telefone}}</div>
+        <div><label>Email:</label> {{administrador.email}}</div>
+        <div><button (click)="alterar(administrador)" class="btn-alterar">Alterar</button> <button (click)="excluir(administrador)" class="btn-danger">Excluir</button></div>
+      </div>
+      <button (click)="maisItens()" *ngIf="maisItensPaginado">Carregar mais</button>
     </div>
-    <button (click)="maisItens()" *ngIf="maisItensPaginado">Carregar mais</button>
   </div>
 </ion-content>

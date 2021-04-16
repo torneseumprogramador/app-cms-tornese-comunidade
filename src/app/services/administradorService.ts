@@ -10,6 +10,13 @@ export class AdministradorService{
   }
 
   public async salvar(administrador:Administrador){
-    return await this.http.post<Administrador[]>(`${environment.uri}/administradores.json`, administrador).toPromise()
+    if(administrador.id > 0){
+      return await this.http.put<Administrador>(`${environment.uri}/administradores/${administrador.id}.json`, administrador).toPromise()
+    }
+    return await this.http.post<Administrador>(`${environment.uri}/administradores.json`, administrador).toPromise()
+  }
+
+  public async excluir(administrador:Administrador){
+    await this.http.delete(`${environment.uri}/administradores/${administrador.id}.json`).toPromise()
   }
 }

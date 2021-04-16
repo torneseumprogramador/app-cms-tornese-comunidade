@@ -4,25 +4,37 @@
   <app-menu></app-menu>
   <div id="container">
     <h1>Páginas</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Restrita?</th>
-          <th>Login?</th>
-          <th>Home?</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let pagina of paginas">
-          <td>{{pagina.nome}}</td>
-          <td>{{pagina.areaRestrita ? "Sim" : "Não"}}</td>
-          <td>{{pagina.login ? "Sim" : "Não"}}</td>
-          <td>{{pagina.home ? "Sim" : "Não"}}</td>
-        </tr>
-      </tbody>
-    </table>
+    <button (click)="abrirForm()" class="btn btn-primary">Novo</button>
+    <hr>
+    <div *ngIf="form">
+      <app-pagina-form></app-pagina-form>
+    </div>
+    <div *ngIf="!form" class="scroolTable">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Restrita?</th>
+            <th>Login?</th>
+            <th>Home?</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pagina of paginas">
+            <td>{{pagina.nome}}</td>
+            <td>{{pagina.areaRestrita ? "Sim" : "Não"}}</td>
+            <td>{{pagina.login ? "Sim" : "Não"}}</td>
+            <td>{{pagina.home ? "Sim" : "Não"}}</td>
+            <td><button (click)="alterar(pagina)"  class="btn-alterar">Alterar</button></td>
+            <td><button (click)="excluir(pagina)" class="btn-danger">Excluir</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <button (click)="maisItens()" *ngIf="maisItensPaginado">Carregar mais</button>
+    </div>
 
-    <button (click)="maisItens()" *ngIf="maisItensPaginado">Carregar mais</button>
   </div>
 </ion-content>

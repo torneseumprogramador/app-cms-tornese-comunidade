@@ -14,7 +14,12 @@ export class AdmFormComponent implements OnInit {
   constructor(private http:HttpClient) { }
 
   ngOnInit() {
+    if(AdmFormComponent.adm){
+      this.administrador = AdmFormComponent.adm
+    }
   }
+
+  static adm:Administrador
   
   emptyAdm:Administrador = { id: 0, nome: null, telefone: null, email: null, senha: null }
   administrador:Administrador = this.emptyAdm

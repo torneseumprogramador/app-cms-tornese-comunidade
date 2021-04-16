@@ -8,6 +8,7 @@ import { PaginasRoutingModule } from './paginas-routing.module';
 import { MenuComponent } from '../shared/menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from '../shared/header/header.component';
+import { PaginaFormComponent } from './pagina-form/pagina-form.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { HeaderComponent } from '../shared/header/header.component';
     MenuComponent,
     HeaderComponent,
     PaginasPage,
+    PaginaFormComponent
   ]
 })
 export class PaginasPageModule {}

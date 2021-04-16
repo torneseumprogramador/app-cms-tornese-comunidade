@@ -1,0 +1,23 @@
+<form>
+  <label for="nome">Nome:</label><br>
+  <input type="text" [(ngModel)]="pagina.nome" id="nome" name="nome"><br>
+
+  <label for="conteudo">Conteúdo:</label><br>
+  <textarea type="text" [(ngModel)]="pagina.conteudo" id="conteudo" name="conteudo"></textarea><br><br>
+
+  <label for="areaRestrita">Área Restrita:</label><br>
+  <input type="checkbox" [(ngModel)]="pagina.areaRestrita" id="areaRestrita" name="areaRestrita"><br><br>
+
+  <label for="login">Login:</label><br>
+  <input type="checkbox" [(ngModel)]="pagina.login" id="login" name="login"><br><br>
+
+  <label for="home">Home:</label><br>
+  <input type="checkbox" [(ngModel)]="pagina.home" id="home" name="home"><br><br>
+
+  <label for="ordem">Ordem:</label><br>
+  <input type="number" [(ngModel)]="pagina.ordem" id="ordem" name="ordem"><br><br>
+
+  <input type="submit" [disabled]="!pagina.nome || !pagina.conteudo " (click)="salvar()" value="Salvar">
+  <button class="cancelar" class="cancelar" (click)="cancelar()">Cancelar</button>
+</form>
+<br>
