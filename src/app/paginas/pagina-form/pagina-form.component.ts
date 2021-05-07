@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Administrador } from 'src/app/models/administrador';
 import { Pagina } from 'src/app/models/pagina';
 import { PaginaService } from 'src/app/services/paginaService';
+import { SessionService } from 'src/app/services/sessionService';
 import { PaginasPage } from '../paginas.page';
 
 @Component({
@@ -24,7 +26,8 @@ export class PaginaFormComponent implements OnInit {
   pagina:Pagina = this.emptyPage
 
   salvar(){
-    new PaginaService(this.http).salvar(this.pagina)
+    let admLogado:Administrador = SessionService.get("admLogado")
+    new PaginaService(this.http).salvar(admLogado.token, this.pagina)
     this.pagina = this.emptyPage
     alert('Salvo no banco de dados')
     PaginasPage.getInstance().form = false;

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form >
+    <fieldset>
+      <legend>Login:</legend>
+      <label for="email">Email:</label>
+      <input type="text" id="email" [(ngModel)]="administrador.email" name="email"><br><br>
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" [(ngModel)]="administrador.senha" name="senha"><br><br>
+      <div class="erro" *ngIf="erro">{{erro}}</div>
+      <button (click)="logar()">Entrar</button>
+    </fieldset>
+  </form>
+</ion-content>

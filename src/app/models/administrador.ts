@@ -4,4 +4,5 @@ export interface Administrador{
   telefone: string
   email: string
   senha: string
+  token: string
 }
