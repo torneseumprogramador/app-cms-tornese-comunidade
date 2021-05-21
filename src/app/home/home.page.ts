@@ -12,10 +12,10 @@ import { SessionService } from '../services/sessionService';
 export class HomePage {
 
   constructor(private router:Router) {
-    this.admLogado = SessionService.get("admLogado")
-    if(!this.admLogado){
-      this.router.navigateByUrl("/login")
-    }
+    // this.admLogado = SessionService.get("admLogado")
+    // if(!this.admLogado){
+    //   this.router.navigateByUrl("/login")
+    // }
   }
 
   imagem:string = ""
