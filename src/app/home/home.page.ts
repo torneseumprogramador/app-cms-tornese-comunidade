@@ -23,9 +23,8 @@ export class HomePage {
   private camera: Camera = new Camera();
 
   chamarCamera(){
-    alert("aqui");
     const options: CameraOptions = {
-      quality: 100,
+      quality: 80,
       destinationType: this.camera.DestinationType.FILE_URI,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE
