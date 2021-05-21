@@ -5,4 +5,5 @@ export interface Administrador{
   email: string
   senha: string
   token: string
+  imagem: string
 }

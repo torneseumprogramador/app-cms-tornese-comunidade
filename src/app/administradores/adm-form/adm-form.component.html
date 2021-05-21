@@ -11,6 +11,12 @@
   <label for="senha">Senha:</label><br>
   <input type="password" [(ngModel)]="administrador.senha" id="senha" name="senha"><br><br>
 
+  <button (click)="chamarCamera()" style="color:#fff;background: blue;padding: 20px;">Carregar foto</button>
+  <br>
+  ------------------------<br>
+  <img src="{{imagem}}"><br>
+  ------------------------<br>
+
   <input type="submit" [disabled]="!administrador.nome || !administrador.email || !administrador.senha" (click)="salvar()" value="Salvar">
   <button class="cancelar" (click)="cancelar()">Cancelar</button>
 </form>
