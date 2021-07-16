@@ -4,8 +4,9 @@
     <description>App CMS Comunidade.</description>
     <author email="danilo@torneseumprogramador.com.br" href="https://www.torneseumprogramador.com.br/">Com alunos do torne-se um programador</author>
     <content src="index.html" />
-    <access origin="http://api.didox.com.br" />
-    <allow-navigation href="http://api.didox.com.br" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
@@ -91,6 +92,7 @@
         <splash height="2436" src="resources/ios/splash/Default-2436h.png" width="1125" />
         <splash height="2732" src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" />
     </platform>
+    <plugin name="cordova-plugin-whitelist" spec="1.3.3" />
     <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
     <plugin name="cordova-plugin-device" spec="2.0.2" />
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
