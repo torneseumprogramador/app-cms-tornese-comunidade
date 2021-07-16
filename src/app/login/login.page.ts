@@ -36,7 +36,7 @@ export class LoginPage implements OnInit {
       this.router.navigateByUrl("/home")
     }
     catch(e){
-      this.erro = "Login ou senha inválidos!"
+      this.erro = "Login ou senha inválidos! - " + e.message
     }
   }
 

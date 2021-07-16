@@ -20,7 +20,7 @@ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore debug.keystore 
 ## digitar password: cmsapp
 -----------------------------------------------------------------------------------------
 # - passo 4
-/Users/danilo/Library/Android/sdk/build-tools/27.0.3/zipalign -v 4 /Users/danilo/projetos/torne-se/aulas/projeto-cms-comunidade/app-cms/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk cmsapp.apk
+/Users/danilo/Library/Android/sdk/build-tools/30.0.3/zipalign -v 4 /Users/danilo/projetos/torne-se/aulas/projeto-cms-comunidade/app-cms/platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk cmsapp.apk
 -----------------------------------------------------------------------------------------
 ## instalar app no celular e ver o log de erro, conectar o celular no usb e destravar o celular
 # - passo 5

@@ -34,11 +34,13 @@ ion-title, ion-item{
 }
 
 input[type="text"], input[type="password"], input[type="number"], textarea{
-  color: #fff;
+  color: #000;
+  background-color: #fff;
 }
 
 input[type="submit"]{
-  color: #fff;
+  color: #000;
+  background-color: #fff;
 }
 
 .cancelar{
