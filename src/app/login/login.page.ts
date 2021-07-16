@@ -24,7 +24,8 @@ export class LoginPage implements OnInit {
     telefone: "",
     email: "",
     token: "",
-    senha: ""
+    senha: "",
+    imagem: ""
   }
 
   async logar(){
