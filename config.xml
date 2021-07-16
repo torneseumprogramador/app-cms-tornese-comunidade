@@ -4,8 +4,8 @@
     <description>App CMS Comunidade.</description>
     <author email="danilo@torneseumprogramador.com.br" href="https://www.torneseumprogramador.com.br/">Com alunos do torne-se um programador</author>
     <content src="index.html" />
-    <access origin="http://api.didox.com.br"/>
-    <allow-navigation href="http://api.didox.com.br"/>
+    <access origin="http://api.didox.com.br" />
+    <allow-navigation href="http://api.didox.com.br" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
