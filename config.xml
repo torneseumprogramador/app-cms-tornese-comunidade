@@ -4,14 +4,13 @@
     <description>App CMS Comunidade.</description>
     <author email="danilo@torneseumprogramador.com.br" href="https://www.torneseumprogramador.com.br/">Com alunos do torne-se um programador</author>
     <content src="index.html" />
-    <access origin="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
+    <access origin="http://api.didox.com.br"/>
+    <allow-navigation href="http://api.didox.com.br"/>
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <preference name="ScrollEnabled" value="false" />
+    <preference name="ScrollEnabled" value="true" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="FadeSplashScreenDuration" value="300" />
